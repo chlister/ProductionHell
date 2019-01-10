@@ -1,0 +1,24 @@
+Project notes.
+
+Name Unknown..
+
+Description:
+World simulation application.
+
+Program should emulate a basic world growing and it should be possible to gather the resources.
+The resource you gather can be used for different things (Crafting).
+World will have a gathering spot where you can gather resource. Gathering takes time, and different types gives
+different yield.
+Most resource can be of different types (different kind of trees, stone, food).
+
+
+
+Features:
+Resource growth
+Gathering areas
+Crafting (Using resources)
+AI to compete with
+Different gathering spots
+Multiplayer
+
+
