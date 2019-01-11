@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>250</x>
-      <y>340</y>
-      <w>130</w>
-      <h>110</h>
+      <x>180</x>
+      <y>318</y>
+      <w>78</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>/Tree/
 --
-+/- name
-+/- value
-+/- resourcePoints
 +/- growthTime
-</panel_attributes>
+--
++ void grow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>510</y>
-      <w>100</w>
-      <h>90</h>
+      <x>138</x>
+      <y>486</y>
+      <w>84</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Oak
 --
@@ -36,21 +34,21 @@ resourcePoints = 20</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
-      <y>440</y>
-      <w>210</w>
-      <h>90</h>
+      <x>162</x>
+      <y>378</y>
+      <w>60</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>190.0;10.0;190.0;50.0;10.0;50.0;10.0;70.0</additional_attributes>
+    <additional_attributes>80.0;10.0;80.0;90.0;10.0;90.0;10.0;180.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>70</x>
-      <y>400</y>
-      <w>140</w>
-      <h>50</h>
+      <x>120</x>
+      <y>198</y>
+      <w>84</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Not sure if resource 
 needs methods
@@ -60,10 +58,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>0</x>
-      <y>270</y>
-      <w>440</w>
-      <h>390</h>
+      <x>36</x>
+      <y>132</y>
+      <w>648</w>
+      <h>492</h>
     </coordinates>
     <panel_attributes>Models
 --
@@ -73,23 +71,29 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>300</y>
-      <w>100</w>
-      <h>110</h>
+      <x>894</x>
+      <y>192</y>
+      <w>102</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>/Area/
 --
+*/- double size
++/- ArrayList resources
++/- array[int] {xPos, yPos}
+--
++ Resource gatherFromArea(Resource toGather, !((HarvestTool)))
++ 
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>610</x>
-      <y>200</y>
-      <w>180</w>
-      <h>70</h>
+      <x>894</x>
+      <y>120</y>
+      <w>108</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Area is abstract class for 
 all areas, they contain all 
@@ -97,5 +101,187 @@ resources that the player
 tries to get
 bg=blue</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>894</x>
+      <y>300</y>
+      <w>102</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Area
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>342</y>
+      <w>198</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>/Tool/
+--
+double durability
+int value
+--
++ Resource GatherResource(ResourceType type)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>942</x>
+      <y>252</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>192</y>
+      <w>174</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>AreaFactory
+--
++ Area createArea()
++ Area createArea(double size, array[2] pos)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>240</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>/Item/
+--
+int value
+String name
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>306</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>438</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>TimberTool
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>438</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RockTool
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>438</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>HarvestTool
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>630</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RockTool
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>582</x>
+      <y>240</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ResourceType
+&lt;&lt;enum&gt;&gt;
+--
+Tree
+Rock
+Liquid
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>192</y>
+      <w>102</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>/Resource/
+--
++/- ResourceType type
++/- name
++/- value
++/- resourcePoints
+--
++ void </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>264</y>
+      <w>102</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;60.0;10.0;60.0;10.0;90.0</additional_attributes>
   </element>
 </diagram>

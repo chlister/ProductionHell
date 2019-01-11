@@ -10,6 +10,8 @@ The resource you gather can be used for different things (Crafting).
 World will have a gathering spot where you can gather resource. Gathering takes time, and different types gives
 different yield.
 Most resource can be of different types (different kind of trees, stone, food).
+Players have tools and item at their disposal - some needs maintenance.
+
 
 
 
@@ -19,6 +21,6 @@ Gathering areas
 Crafting (Using resources)
 AI to compete with
 Different gathering spots
-Multiplayer
+Multi-player
 
 
